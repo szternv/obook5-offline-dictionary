@@ -33,6 +33,18 @@ This full flow has been tested on a real OBOOK5.
 
 ---
 
+## 📷 Dictionary in action
+
+These photos show the working mod on a real OBOOK5. The selected word is passed directly to the built-in offline dictionary; no manual typing is required.
+
+| 1. Long-press a word | 2. Tap **Search** | 3. See the dictionary result |
+|:---:|:---:|:---:|
+| ![Long-pressing punched opens the selection menu](images/long-press.webp) | ![The Search option is highlighted](images/search.webp) | ![The dictionary automatically looks up punched and displays the English-Spanish entry](images/dictionary.webp) |
+
+The menu label remains **Search**; the modification changes what the action does.
+
+---
+
 # 🟢 Start here
 
 There are **four main stages**:
