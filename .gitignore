@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Local work/build outputs
+build/
+stock/
+unpacked/
+*.img
+*.img.md5
+*.dict
+
+# Vendor binaries / extracted firmware
+*.so
+*.so.*
+*.bin
+*.dump
+*.rom
+
+# Logs / local metadata
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
