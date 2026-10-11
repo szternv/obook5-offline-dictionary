@@ -2,10 +2,9 @@
 
 ## Unreleased
 
-Repository prepared for public review. Nothing has been published from this
-working copy.
+No tagged GitHub release has been created yet.
 
-## 1.0.0 - prepared release
+## Initial public source publication (2026-10-11)
 
 - Documented the physically validated Search-action redirect flow: the menu label remains `Search`, but tapping it opens the stock Dictionary app.
 - Added reproducible `libeinkfbreader` patch builder.

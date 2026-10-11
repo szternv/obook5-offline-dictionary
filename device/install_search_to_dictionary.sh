@@ -92,7 +92,7 @@ fi
 echo
 echo "SUCCESS."
 echo "The reader Search handler now calls DictFetchScrWord::searchWord()."
-echo "The remaining visible Search label was changed to Dictionary."
+echo "The visible menu label remains Search; tapping it now opens Dictionary."
 echo "A backup is at: $BACKUP"
 echo
 echo "Rebooting once so bookreader definitely loads the new library..."

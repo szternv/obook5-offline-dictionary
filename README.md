@@ -2,7 +2,7 @@
 
 Enable the OBOOK5's **built-in offline dictionary**, make it automatically look up the word you selected, and install your own dictionaries.
 
-This guide is written for people who are comfortable copying files and following commands, but **do not need to know Linux, MIPS assembly, reverse engineering, or firmware development**.
+This is a step-by-step guide; prior reverse-engineering or MIPS assembly experience is not required. However, installation does require command-line tools, local network configuration, and careful firmware checks.
 
 The final result looks like this:
 
@@ -23,6 +23,9 @@ You see the definition / translation
 ```
 
 This full flow has been tested on a real OBOOK5.
+
+> [!WARNING]
+> **Experimental firmware modification.** This procedure modifies system startup and shared libraries. An installation failure or incompatible firmware may leave your device unable to boot. Use only the exact tested files, keep backups, and read the [recovery notes](docs/RECOVERY.md) before starting. Low-level recovery is not covered by this project.
 
 > [!IMPORTANT]
 > This project does **not** include OBOOK firmware or OBOOK proprietary program files.
@@ -577,7 +580,7 @@ If either hash is different, stop.
 
 ---
 
-# 9. Build the Dictionary button patch
+# 9. Build the Search-to-Dictionary patch
 
 This is the patch that changes the reader-side action so the built-in dictionary opens.
 
@@ -659,7 +662,7 @@ That is expected.
 
 ---
 
-# 11. Test the Dictionary button
+# 11. Test the modified Search action
 
 Open a book.
 
@@ -760,7 +763,7 @@ house
 Then:
 
 1. long-press `house`;
-2. tap **Dictionary**;
+2. tap **Search**;
 3. wait for the dictionary window.
 
 The expected result is:
@@ -1281,7 +1284,7 @@ See [`docs/BEGINNER_LOCAL_OTA.md`](docs/BEGINNER_LOCAL_OTA.md).
 
 ---
 
-## "The Dictionary button appears, but I still have to type the word"
+## "The dictionary window appears, but I still have to type the word"
 
 The first patch is installed, but the autofill patch is not.
 
@@ -1382,43 +1385,3 @@ See:
 - [`NOTICE.md`](NOTICE.md)
 - [`DISCLAIMER.md`](DISCLAIMER.md)
 - [`docs/PUBLISHING_AND_IP.md`](docs/PUBLISHING_AND_IP.md)
-
----
-
-# 🤝 Contributing
-
-If you have another OBOOK5 firmware version, compatibility reports are welcome.
-
-Please provide:
-
-```text
-Device:
-Firmware version:
-libeinkfbreader MD5:
-libdictionaryview MD5:
-Which step failed:
-Relevant text log:
-```
-
-Please do **not** upload OBOOK firmware or proprietary OBOOK binaries to an issue.
-
-See [`CONTRIBUTING.md`](CONTRIBUTING.md).
-
----
-
-# Project status
-
-```text
-[x] Existing Search action redirected to the built-in Dictionary app
-[x] Selected-word autofill
-[x] Automatic lookup
-[x] Custom SQLite dictionaries
-[x] Dictionary switching
-[x] Combined dictionaries
-[x] Rollback scripts
-[x] Beginner installation guide
-[ ] More firmware revisions
-[ ] On-device graphical dictionary selector
-```
-
-If your build matches the tested hashes, follow the steps in order and do not skip the verification stages.

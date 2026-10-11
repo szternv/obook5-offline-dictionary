@@ -1,6 +1,6 @@
-# Public release checklist
+# Release checklist
 
-Before pushing a release to GitHub:
+Use this checklist before publishing each tagged GitHub release. Check items only after verifying them; unchecked items are not claims of completion.
 
 - [ ] No OBOOK firmware image is present.
 - [ ] No extracted OBOOK `.so`, executable, bootloader or partition dump is present.
